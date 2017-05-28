@@ -1,0 +1,20 @@
+<section>
+  <h2>{{category}}</h2>
+  <div class="col">
+    {{#each attributes}}
+      <div class="property">
+        <label>
+          <span class="rating">
+            <a class="inc">+</a>
+            <a class="dec">−</a>
+            <input name="{{short_name}}" value="{{rating}}" min="0" max="5">
+          </span>
+          <span class="label" title="{{description}}">{{name}}</span>
+        </label>
+        <div class="desc collapsed">
+          {{paragraphs description}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

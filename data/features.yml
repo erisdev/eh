@@ -1,0 +1,288 @@
+---
+-   name: Abrader
+    category: Features
+    cost: -10
+    desc: |
+        The robot has an erosive tool, such as a sandblaster or grinding wheel.
+        
+        The abrader inflicts damage equal to the abrader-equipped robot’s Size
+        rating -2. The target robot may not use its Durability rating to reduce
+        damage caused by the abrader.
+        
+-   name: Agile
+    category: Features
+    cost: -4
+    desc: |
+        The robot is more agile than a similar model.
+        
+        The robot’s TN to be struck is increased by 1. A robot’s TN to be
+        struck may not be higher than 10.
+    
+-   name: Anchor
+    category: Features
+    cost: -5
+    max: 5
+    desc: |
+        The robot has some mechanism to anchor itself in place.
+    
+        The robot adds one extra d10 per level of Anchor rating to all Strength
+        checks to resist being moved.
+    
+        A robot may not have an Anchor rating higher than 5.
+
+-   name: Android
+    category: Features
+    cost: -10
+    max: HumanCom - 1
+    desc: |
+        The robot was designed to be indistinguishable from a human.
+
+        A HumanCom check (TN 8) is required to determine that a robot with this
+        feature is not a real human. The number of successes required is equal
+        to the target robot's Android rating.
+
+        A robot with this feature must have a Size rating of 3 or 4. A robot's
+        Android rating may not be higher than its HumanCom rating -1.
+
+-   name: Armored Chassis
+    category: Features
+    cost: -10
+    max: Str - 1
+    desc: |
+        The robot’s frame is more durable than normal.
+        
+        Any impact or crushing damage (such as a club, Abrader, or Vice Grip)
+        inflicted on the robot is automatically reduced by one point for every
+        level of Armored Chassis rating.
+        
+        A robot's Armored Chassis rating may not be higher than its Strength
+        rating -1.
+
+-   name: Attendant Swarm
+    category: Features
+    cost: -6
+    max: "MasterUnit ? MechaniCon * 2 : MechaniCon"
+    desc: |
+        The robot is always attended by a cluster of obedient drones.
+    
+        The robot has one drone for every level of Attendant Swarm rating. A
+        robot may not have more drones than its MechaniCon rating unless it
+        also has the Master Unit feature. Drones may be communicated with like
+        other robots.
+
+        A drone begins with the components that all robots receive for free,
+        along with 19 points for attributes and features (instead of the 100
+        points for attributes and features that robots normally begin with).
+        Note that a drone’s attributes must all be at least rating 1 (meaning
+        that at least 13 points must be spent on attributes before any features
+        are purchased).
+
+        Drones may have a maximum of 10 points worth of defects. A drone cannot
+        have an Attendant Swarm of its own.
+
+        Drones are treated as separate autonomous robots controlled by the
+        player. Each drone's initiative is determined separately during
+        conflict situations.
+
+-   name: Backup System
+    category: Features
+    cost: -8
+    desc: |
+        The robot’s OS contains a separate backup system.
+
+        If the robot’s current OS Threshold degrades to 0 from reprogramming
+        attempts, the robot may make a DigiCon check (TN 8) after 1d10 minutes.
+        If it has any successes, it may continue to make additional checks
+        every 1d10 minutes until it has as many total successes as its maximum
+        OS Threshold (at which point the reprogramming is nullified).
+
+        If the robot fails more than one check in a row, its backup system
+        fails to come online and will not automatically engage until its
+        programming is reset.
+
+-   name: Battering Ram
+    category: Features
+    cost: -12
+    desc: |
+        The robot has an onboard pneumatic ram, made for knocking in doors or
+        driving in bolts.
+        
+        To use it, the robot makes a Strength check (TN 8) to anchor itself
+        during its turn in an interaction sequence. A robot with the Anchor
+        feature adds extra d10s to the Strength check equal to its Anchor
+        rating. The ram is deployed immediately following the Strength check.
+        The ram in icts damage equal to the anchor’s successes + the robot’s
+        normal damage from strike.
+        
+        The battering ram can only be used against immobile or unsuspecting
+        targets.
+        
+-   name: Biofrequency
+    category: Features
+    cost: -3
+    max: 99
+    desc: |
+        The robot has special sensors that can detect the presence of organic
+        lifeforms.
+
+        The robot can detect plants or animals up to 10 meters away per level
+        of Biofrequency Scanner rating, even through smoke or other
+        obscurement. The scanner only detects the presence of biological
+        matter, and cannot determine its specific type or current state.
+
+-   name: Buoyant
+    category: Features
+    cost: -5
+    desc: |
+        The robot has an inflatable flotation device or some other mechanism
+        that provides buoyancy.
+        
+        The robot cannot be submerged in water or other liquids while the
+        feature is in use. A robot with the Buoyant feature cannot move under
+        its own power unless it also has the Submersible feature.
+    
+-   name: Cargo Hauler
+    category: Features
+    cost: -3
+    max: 99
+    requires: 
+        - External Container
+        - Internal Compartment
+        - Liquid Dispenser
+    desc: |
+        The robot can store more matter than a similar model.
+        
+        Each time this feature is purchased, the dimensions of one of the
+        robot's storage containers are doubled. For example, a Size 2 external
+        container approximates a cube 20 cm wide. The same container with the
+        Cargo Hauler feature would approximate a cube 40 cm wide. A container's
+        dimensions can only be increased once.
+        
+        A robot with the Cargo Hauler feature must already have the External
+        Container, Internal Compartment or Liquid Dispenser feature.
+
+-   name: Claw
+    category: Features
+    cost: -10
+    desc: |
+        The robot has a grasping claw that can attach to objects or other
+        robots.
+        
+        If the robot makes a successful interaction check with the claw, the
+        target robot must remain within reach of the robot using the claw. This
+        condition will persist until the robot using the claw releases its
+        grip, or until the Damage Threshold of the robot using the claw falls
+        to 0.
+        
+        Either robot may attempt dragging checks as normal.
+
+-   name: Collapsible
+    category: Features
+    cost: -4
+    max: Siz - 2
+    desc: |
+        The robot can compact itself to occupy a smaller volume than normal.
+        
+        The robot can decrease its Size rating by 1 for every level of
+        Collapsible rating. A robot may not have a Collapsible rating higher
+        than its Size rating -2.
+        
+        When the robot is collapsed, its Dexterity and Mobility ratings degrade
+        by 1 for every decrease in Size level. These ratings return to their
+        previous states as the robot expands. This feature does not alter the
+        robot's maximum Damage Threshold or TN to be dragged.
+
+-   name: Common Model
+    category: Features
+    cost: -8
+    conflicts:
+        - Rare Model
+    desc: |
+        The robot was built using standard, easily-replaceable parts.
+        
+        All Perception checks to find replacement equipment for a robot with
+        this feature gain one extra d10.
+        
+        A robot with this feature cannot have the Rare Model defect.
+
+-   name: Cutting Laser
+    category: Features
+    cost: -15
+    desc: |
+        The robot has an onboard cutting laser that can penetrate most metals.
+
+        The laser inflicts damage equal to the equipped robot’s Power rating
+        +1. For example, a robot with a Power rating of 3 would in ict 4 points
+        of damage.
+
+        The laser has a range of approximately 10 cm per Size rating. For
+        example, a Size 3 robot’s cutting laser has a maximum range of 30 cm.
+
+        Striking an unwilling target with the cutting laser requires a
+        successful interaction check.
+
+-   name: Databank
+    category: Features
+    cost: -5
+    max: DigiCon
+    desc: |
+        The robot has an extensive collection of information on a variety of
+        topics.
+        
+        A robot with the Databank feature may make a DigiCon check (TN 8) to
+        recall information on a topic. The robot adds its Databank rating to
+        the check. The number of successes required for a particular topic or
+        detail is determined by the Programmer.
+        
+        A robot may not have a Databank rating higher than its DigiCon rating.
+
+-   name: Display Screen
+    category: Features
+    cost: -1
+    max: 99
+    desc: |
+        The robot has an onboard video screen that can display status messages
+        or play video recordings.
+        
+        A rating 1 screen is a simple monochromatic display, while higher-rated
+        screens are more elaborate.
+
+-   name: Disposal
+    category: Features
+    cost: -8
+    desc: |
+        The robot is equipped with an internal shredder, incinerator, or other
+        device capable of quickly breaking up or destroying matter.
+
+        Immobile robots are automatically damaged. Resisting robots must rst be
+        caught (this requires an interaction check). The disposal in icts
+        damage equal to the equipped robot’s Size rating -1.
+
+        After being damaged, both robots make a contested Strength check (TN
+        8). If the acting robot has more successes, the target robot is trapped
+        in the disposal, and the acting robot may choose to automatically
+        damage the target robot again during the acting robot's next
+        initiative. The target robot may try to escape again during its next
+        initiative.
+
+        Only robots at least one Size rating below the disposal-equipped robot
+        will fit in the disposal.
+
+-   name: Buggy Cameras
+    category: Defects
+    cost: +5
+    conflicts:
+        - Enhanced Cameras
+    desc: |
+        The robot’s camera system is flawed.
+
+        Every 1 rolled when using the robot's Perception rating negates one
+        success made during that check. For example, a robot with RealityCom 3
+        and Perception 4 makes a check to predict the weather. It rolls 5, 1,
+        and 8 for its RealityCom and 9, 1, 3, and 5 for its Perception. Because
+        the robot rolled two 1s, two successes are cancelled out.
+        
+        This defect cannot reduce the number of successes rolled to fewer than
+        0. A robot with the Buggy Cameras defect cannot have the Enhanced
+        Cameras feature.
+        

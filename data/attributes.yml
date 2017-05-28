@@ -1,0 +1,208 @@
+---
+-   name: RealityCom
+    category: Intelligence
+    desc: |
+        (RealityCom) defines how well a robot understands cause and effect in
+        the physical world.
+
+        Use this attribute to calculate the trajectory of an object, or to
+        understand why something is on re. Robots with high RealityCom ratings
+        are able to easily understand concepts like gravity or the physical
+        nature of their environment.
+
+        A robot’s dice pool to launch a projectile is its RealityCom rating +
+        Reflexes rating.
+
+        A robot’s RealityCom pool may be added to certain Perception checks, at
+        the Programmer’s discretion.
+
+-   name: HumanCom
+    category: Intelligence
+    desc: |
+        (HumanCom) defines how well a robot understands human minds or organic
+        actions.
+
+        Use this attribute to ascertain the motives of organic life, or to
+        determine the functions of their equipment.
+
+        Robots with low HumanCom ratings are not very “user-friendly”, while
+        robots with high HumanCom ratings often display very human-like
+        behavior.
+
+        A robot’s dice pool to manage or communicate with organics is its
+        HumanCom rating + Perception rating.
+
+-   name: DigiCon
+    category: Intelligence
+    desc: |
+        (DigiCon) defines how adept a robot is at interacting with non-physical
+        systems like computers.
+
+        Use this attribute to interface with computer systems or reprogram
+        other robots.
+
+        A robot uses its DigiCon pool to remove OS Threshold damage in icted
+        during reprogramming attempts. See Reprogramming a Robot on page 18 for
+        more information.
+
+        A robot’s OS Threshold rating is equal to its DigiCon rating + Buffer
+        rating.
+
+-   name: MechaniCon
+    category: Intelligence
+    desc: |
+        (MechaniCon) defines how adept a robot is at interacting with
+        mechanical systems, like controlling a drone or adjusting a factory’s
+        automatic building units to construct machines of a novel design.
+
+        Use this attribute to remotely control other robots, or to rewire
+        mechanical systems.
+
+        A robot’s dice pool to repair physical damage to itself or other robots
+        is its MechaniCon rating + Dexterity rating. See Repairing a Robot on
+        page 17 for more information.
+
+-   name: Dexterity
+    category: Chassis
+    short: Dex
+    desc: |
+        (Dex) measures the degree of fine motor control necessary for
+        interaction with the outside world.
+
+        Use this attribute to make fine adjustments with a manipulative
+        appendage or to tap in a precise sequence of key punches.
+
+        A robot’s dice pool for manually interacting with other objects is its
+        Dexterity rating + Reflexes rating.
+
+-   name: Mobility
+    category: Chassis
+    short: Mobil
+    desc: |
+        (Mobil) dictates the robot’s capability to propel itself about the
+        environment (wheels, ambulatory limbs, etc).
+
+        Use this attribute to climb over obstacles or move across rough terrain
+        without being slowed.
+
+        A robot with a Mobility rating of 0 cannot move on its own, no matter
+        what its Reflexes rating is.
+
+        The TN to touch, strike, or otherwise physically interact with an
+        unwilling robot is the target robot’s Mobility rating + Reflexes rating.
+
+-   name: Perception
+    category: Chassis
+    short: Per
+    desc: |
+        (Per) determines the variety and quality of sensors mounted, as well as
+        information relayed back.
+
+        This is the dice pool a robot has to notice objects, features, sounds,
+        or other external stimuli.
+
+        The Programmer may require the robot to use its Buffer rating instead
+        of its Perception rating in certain situations, such as when attempting
+        to see through re, or to detect speci c noises in a very noisy setting.
+
+-   name: Reflexes
+    category: Chassis
+    short: Ref
+    desc: |
+        (Ref) determines response lag and overall speed of animation.
+
+        In conflict situations, initiative is determined by rolling a d10 and
+        adding the robot’s Reflexes rating. Robots with higher initiative
+        totals act first.
+
+        A robot’s maximum speed is equal to its Mobility rating + Reflexes
+        rating in kilometers per hour or meters per round.
+
+        A robot with a Reflexes rating of 0 cannot move on its own, no matter
+        what its Mobility rating is.
+
+-   name: Strength
+    category: Chassis
+    short: Str
+    desc: |
+        (Str) determines the robot’s maximum load capacity and ability to
+        inflict brute-force damage on other objects.
+
+        Two robots attempting to move each other both make Strength checks. The
+        TN is (the target robot's Size rating - the acting robot's Size rating)
+        +5. The robot with more successes is the victor.
+
+        The TN to drag an unmoving robot is (the unmoving robot’s Size rating -
+        the pushing robot's Size rating) + 5.
+
+        If a robot strikes another object, the strike inflicts damage equal to
+        one-half the attacking robot’s Strength rating (round down, minimum
+        damage of zero).
+
+-   name: Durability
+    category: Crux
+    short: Dur
+    desc: |
+        (Dur) measures how much damage a robot can withstand before ceasing
+        operation or being destroyed.
+
+        A robot’s maximum Damage Threshold is equal to its Durability rating +
+        Size rating.
+
+        If the robot's Damage Threshold is degraded by an attack or object, it
+        must make a Durability check. Each success (TN 8) reduces the damage in
+        icted by 1 (minimum damage of 0).
+
+        A robot ceases operation when its current Damage Threshold rating
+        degrades to 0.
+
+-   name: Buffer
+    category: Crux
+    short: Buf
+    desc: |
+        (Buf) is a rating of the robot’s ability to withstand information
+        overload due to bright lights, EM pulses, conflicting programming
+        orders, or other disruptive conditions.
+
+        The TN to reprogram a robot, or overwhelm its sensors, is the target
+        robot’s Buffer rating +5. See Reprogramming a Robot on page 18 for more
+        information.
+
+-   name: Size
+    category: Crux
+    short: Siz
+    desc: |
+        (Siz) rates the robot’s physical dimensions. A Size 1 robot has about
+        the same volume as a cube with 15 cm faces. A Size 2 robot approximates
+        a cube with 30 cm faces, a Size 3 robot 45 cm, a Size 4 robot 60 cm,
+        and a Size 5 robot 75 cm.
+
+        A robot with a Size rating of 5 increases its Strength rating by 1.
+        This can increase the robot’s Strength rating above 5.
+
+        A robot with a Size rating of 1 increases its Dexterity rating by 1.
+        This can increase the robot’s Dexterity rating above 5.
+
+        For reference, an adult human approximates the same volume as a Size 4
+        robot. A Size 5 robot has slightly more volume than a large human.
+
+-   name: Power
+    category: Crux
+    short: Pow
+    desc: |
+        (Pow) rates how long the robot can operate on its own without
+        recharging. A robot with a low Power rating can only function for a day
+        or two without recharging, while a robot with a high rating can
+        function independently for a week or more.
+
+        Every day, the robot must make a Power check. At least one success (TN
+        8) means the robot has enough power for another 24 hours. Failure means
+        the robot’s battery is drained, and it must seek recharging.
+
+        If a robot’s battery is drained, it has one hour to recharge before its
+        Intelligence and Chassis ratings all degrade by 1. If the robot does
+        not recharge, its Intelligence and Chassis ratings will continue to
+        degrade at the rate of 1 per hour. These ratings revert to normal after
+        a full recharge.
+
+        Recharging normally takes one hour, unless otherwise stated.

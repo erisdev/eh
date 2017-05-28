@@ -1,0 +1,118 @@
+---
+-   name: Interaction Pool
+    category: Physical Interaction
+    derive: Dex + Ref
+    desc: |
+        (Dexterity rating + Reflexes rating)
+
+        This is the dice pool a robot has to strike, grab, or otherwise
+        manually interact with an unwilling robot or other mobile object. The
+        robot makes contact if it has at least one success. A robot may only
+        make one interaction check per round, regardless of how many limbs it
+        has.
+
+        If the robot is attacking another robot, it either in icts its normal
+        strike damage (Strength rating ÷ 2, round down) or damage from a
+        special feature (such as a saw). Only one feature may be used at a time
+        when attacking. A robot can usually touch or strike an immobile object
+        or robot without rolling an interaction check.
+
+-   name: Damage from Strike
+    category: Physical Interaction
+    derive: Str / 2
+    desc: |
+        This is how much damage a robot can inflict by simply smashing its body
+        or limbs into another object.
+
+-   name: TN to be struck
+    category: Physical Interaction
+    derive: min(Mobil + Ref, 10)
+    desc: |
+        (Mobility rating + Reflexes rating)
+
+        The TN to strike an alert robot is the target’s Mobility rating +
+        Reflexes rating. A robot's TN to be struck may not be higher than 10.
+
+-   name: Initiative
+    category: Movement
+    derive: Ref
+    display: "1d10 + {value}"
+    desc: |
+        (1d10 + Reflexes rating)
+
+        This measures which robots will act first in a conflict or other event
+        where multiple robots attempt to act before each other.
+
+        A robot’s initiative is determined by rolling a d10 and adding the
+        robot’s Reflexes rating.
+
+        For example, a player controlling a robot with a Reflexes rating of 3
+        rolls a d10 and gets a 5. The robot's initiative roll for that conflict
+        is 8 (3+5).
+
+        Robots with higher initiative rolls act before robots with lower
+        initiative rolls.
+
+        Initiative totals are normally static throughout the conflict, but the
+        Programmer may elect to reroll initiative at the beginning of every
+        round, or whenever the situation changes. A particularly ready or alert
+        robot may receive a +2 bonus to its first initiative total.
+
+-   name: Speed
+    category: Movement
+    derive: Mobil + Ref
+    desc: |
+        (Mobility rating + Reflexes rating)
+
+        This determines how fast a robot can move from one place to another. A
+        robot’s Speed rating is equal to its speed in kilometers per hour
+        during long journeys, or meters per round during conflict situations.
+
+-   name: Damage Threshold
+    category: Thresholds
+    derive: Dur + Siz
+    desc: |
+        This is a measure of how hardy and resilient the robot’s physical body
+        is. Robots with low Damage Threshold ratings are easily broken and hard
+        to repair, while robots with high ratings can withstand tremendous
+        damage and are easily fixed.
+
+        A robot’s maximum Damage Threshold rating normally never changes. If a
+        robot is damaged, its current Damage Threshold rating is lowered by the
+        amount of damage inflicted. When a robot’s current Damage Threshold
+        degrades to 0 or lower, the robot stops functioning and becomes
+        unplayable until its current Damage Threshold is 1 or higher.
+
+-   name: OS Threshold
+    category: Thresholds
+    derive: DigiCon + Buf
+    desc: |
+        (DigiCon rating + Buffer rating)
+
+        This is a measure of how resilient and self-sustaining the robot’s
+        “brain” is. Robots with low OS Threshold ratings are easily
+        reprogrammed, while robots with high ratings are very resistant to modi
+        cation.
+
+        A robot’s maximum OS Threshold rating changes if its DigiCon rating
+        degrades. If a robot’s programming is attacked, its current OS
+        Threshold rating degrades.
+
+        Likewise, if the robot is subject to a damaging electrical shock, its
+        current OS threshold is lowered, just like its Damage Threshold would
+        be lowered if the robot was the subject of a violent attack. If the
+        robot's OS Threshold is lowered to 0 because of electrical shock or
+        similar damage, the robot becomes unplayable until its OS Threshold is
+        at least 1.
+
+# -   name: Launch Projectile
+#     category: Minor Pools
+#     derive: RealityCom + Ref
+#
+# -   name: Communicate with Organics
+#     category: Minor Pools
+#     derive: HumanCom + Per
+#
+# -   name: Repair Damage
+#     category: Minor Pools
+#     derive: MechaniCon + Dex

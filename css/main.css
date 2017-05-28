@@ -1,0 +1,124 @@
+html, body {
+    font-family: 'Fira Mono', monospace;
+    font-size: 12pt;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsed {
+    display: none;
+}
+
+.character-sheet {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.character-sheet > * {
+    margin-top: 2rem;
+}
+
+.character-sheet > *:last-child {
+    margin-bottom: 2rem;
+}
+
+.attributes > section {
+    flex: 0 1 200px;
+}
+
+.features > section {
+    flex: 0 1 300px;
+}
+
+/*.features > section > .col {
+    overflow-y: scroll;
+    max-height: 12rem;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, white 8px, white calc(100% - 8px), transparent);
+}
+*/
+.property:first-child {
+    margin-top: 4px;
+}
+
+.property {
+    margin-bottom: 4px;
+}
+
+.property .desc {
+    margin: 1rem;
+    font-size: .8rem;
+}
+
+.property .desc p + p {
+    margin-top: 1rem;
+}
+
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 2.4rem;
+}
+
+.rating input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: .2rem solid black;
+    border-radius: 50%;
+    outline: none;
+    font-size: 1.5rem;
+    text-align: center;
+    background: transparent;
+    color: inherit;
+}
+
+.rating .inc,
+.rating .dec {
+    position: absolute;
+    right: -.3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    background: black;
+    color: white;
+    opacity: 0;
+    transition:
+        opacity ease 200ms;
+}
+
+.rating:hover .inc,
+.rating:hover .dec {
+    opacity: 1;
+}
+
+.rating .inc {
+    top: 0;
+}
+
+.rating .dec {
+    bottom: 0;
+}

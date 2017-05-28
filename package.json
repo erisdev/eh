@@ -1,0 +1,19 @@
+{
+  "name": "eheart",
+  "version": "1.0.0",
+  "description": "character generator for engine heart",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.0",
+    "handlebars": "^4.0.10",
+    "handlebars-loader": "^1.5.0",
+    "webpack": "^2.3.0",
+    "yaml-loader": "^0.4.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.23.0"
+  }
+}

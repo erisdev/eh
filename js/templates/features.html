@@ -1,0 +1,21 @@
+<section>
+  <h2>{{category}}</h2>
+  <div class="col">
+    {{#each features}}
+      <div class="property">
+        <label>
+          <span class="rating">
+            <a class="inc">+</a>
+            <a class="dec">−</a>
+            <input name="{{short_name}}" value="{{rating}}" min="0">
+          </span>
+          <span class="label">{{name}}</span>
+        </label>
+        <div class="desc">
+          <p>Cost: {{cost_per_rating}}</p>
+          {{paragraphs description}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
