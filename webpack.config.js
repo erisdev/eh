@@ -12,8 +12,8 @@ module.exports = {
     context: __dirname,
     devtool: debug ? 'inline-sourcemap' : null,
     entry: {
-        'js/_bundle.js': path.join(__dirname, 'js/_entrypoint.js'),
-        // 'css/_bundle.css': path.join(__dirname, 'css/_entrypoint.scss'),
+        'js/BUNDLE.js': path.join(__dirname, 'js/entrypoint.js'),
+        // 'css/BUNDLE.css': path.join(__dirname, 'css/entrypoint.scss'),
     },
     output: {
         path: __dirname,
